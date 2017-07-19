@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:Speech to Text.xcodeproj">
+      location = "self:/Users/mjnorona/Documents/Projects/iOS/speech-to-text-swift/TongueTwister.xcodeproj">
    </FileRef>
 </Workspace>

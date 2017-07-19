@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		7AE28FD31DD10D6900A663ED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE28FD21DD10D6900A663ED /* AppDelegate.swift */; };
-		7AE28FD51DD10D6900A663ED /* AudioFileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE28FD41DD10D6900A663ED /* AudioFileViewController.swift */; };
 		7AE28FD81DD10D6900A663ED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7AE28FD61DD10D6900A663ED /* Main.storyboard */; };
 		7AE28FDA1DD10D6900A663ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7AE28FD91DD10D6900A663ED /* Assets.xcassets */; };
 		7AE28FDD1DD10D6900A663ED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7AE28FDB1DD10D6900A663ED /* LaunchScreen.storyboard */; };
@@ -20,9 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		7AE28FCF1DD10D6900A663ED /* Speech to Text.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Speech to Text.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7AE28FCF1DD10D6900A663ED /* TongueTwister.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TongueTwister.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7AE28FD21DD10D6900A663ED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7AE28FD41DD10D6900A663ED /* AudioFileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioFileViewController.swift; sourceTree = "<group>"; };
 		7AE28FD71DD10D6900A663ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7AE28FD91DD10D6900A663ED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7AE28FDC1DD10D6900A663ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -50,7 +48,7 @@
 		7AE28FC61DD10D6900A663ED = {
 			isa = PBXGroup;
 			children = (
-				7AE28FD11DD10D6900A663ED /* Speech to Text */,
+				7AE28FD11DD10D6900A663ED /* TongueTwister */,
 				7AE28FD01DD10D6900A663ED /* Products */,
 				7AE28FE41DD1108500A663ED /* Frameworks */,
 			);
@@ -59,17 +57,16 @@
 		7AE28FD01DD10D6900A663ED /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				7AE28FCF1DD10D6900A663ED /* Speech to Text.app */,
+				7AE28FCF1DD10D6900A663ED /* TongueTwister.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		7AE28FD11DD10D6900A663ED /* Speech to Text */ = {
+		7AE28FD11DD10D6900A663ED /* TongueTwister */ = {
 			isa = PBXGroup;
 			children = (
 				7AE28FD21DD10D6900A663ED /* AppDelegate.swift */,
 				7AE28FD91DD10D6900A663ED /* Assets.xcassets */,
-				7AE28FD41DD10D6900A663ED /* AudioFileViewController.swift */,
 				7AE28FEC1DD121CE00A663ED /* Credentials.swift */,
 				7AE28FDE1DD10D6900A663ED /* Info.plist */,
 				7AE28FDB1DD10D6900A663ED /* LaunchScreen.storyboard */,
@@ -77,6 +74,7 @@
 				7AE28FEA1DD1214000A663ED /* SpeechSample.wav */,
 				7AE28FEE1DD128D400A663ED /* MicrophoneViewController.swift */,
 			);
+			name = TongueTwister;
 			path = "Speech to Text";
 			sourceTree = "<group>";
 		};
@@ -92,9 +90,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		7AE28FCE1DD10D6900A663ED /* Speech to Text */ = {
+		7AE28FCE1DD10D6900A663ED /* TongueTwister */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7AE28FE11DD10D6900A663ED /* Build configuration list for PBXNativeTarget "Speech to Text" */;
+			buildConfigurationList = 7AE28FE11DD10D6900A663ED /* Build configuration list for PBXNativeTarget "TongueTwister" */;
 			buildPhases = (
 				7AE28FCB1DD10D6900A663ED /* Sources */,
 				7AE28FCC1DD10D6900A663ED /* Frameworks */,
@@ -105,9 +103,9 @@
 			);
 			dependencies = (
 			);
-			name = "Speech to Text";
+			name = TongueTwister;
 			productName = "Speech to Text";
-			productReference = 7AE28FCF1DD10D6900A663ED /* Speech to Text.app */;
+			productReference = 7AE28FCF1DD10D6900A663ED /* TongueTwister.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -126,7 +124,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 7AE28FCA1DD10D6900A663ED /* Build configuration list for PBXProject "Speech to Text" */;
+			buildConfigurationList = 7AE28FCA1DD10D6900A663ED /* Build configuration list for PBXProject "TongueTwister" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -139,7 +137,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				7AE28FCE1DD10D6900A663ED /* Speech to Text */,
+				7AE28FCE1DD10D6900A663ED /* TongueTwister */,
 			);
 		};
 /* End PBXProject section */
@@ -183,7 +181,6 @@
 			files = (
 				7AE28FEF1DD128D400A663ED /* MicrophoneViewController.swift in Sources */,
 				7AE28FED1DD121CE00A663ED /* Credentials.swift in Sources */,
-				7AE28FD51DD10D6900A663ED /* AudioFileViewController.swift in Sources */,
 				7AE28FD31DD10D6900A663ED /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -338,7 +335,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		7AE28FCA1DD10D6900A663ED /* Build configuration list for PBXProject "Speech to Text" */ = {
+		7AE28FCA1DD10D6900A663ED /* Build configuration list for PBXProject "TongueTwister" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7AE28FDF1DD10D6900A663ED /* Debug */,
@@ -347,7 +344,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7AE28FE11DD10D6900A663ED /* Build configuration list for PBXNativeTarget "Speech to Text" */ = {
+		7AE28FE11DD10D6900A663ED /* Build configuration list for PBXNativeTarget "TongueTwister" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7AE28FE21DD10D6900A663ED /* Debug */,
