@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Hv0-da-b3m">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="MEg-uP-fqj">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -13,7 +13,7 @@
         <!--Audio File-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="AudioFileViewController" customModule="Speech_to_Text" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="AudioFileViewController" customModule="TongueTwister" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -81,17 +81,42 @@
                     <view key="view" contentMode="scaleToFill" id="AAH-fq-HKo">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pXX-gz-hj0">
+                                <rect key="frame" x="114" y="333" width="146" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <state key="normal" title="Start!"/>
+                                <connections>
+                                    <segue destination="Hv0-da-b3m" kind="show" id="wq0-gv-w9M"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dqy-QN-dPK">
+                                <rect key="frame" x="46" y="157" width="282" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Username" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g3m-wo-a74">
+                                <rect key="frame" x="46" y="94" width="282" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sgZ-7K-yd8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1636" y="1460"/>
+            <point key="canvasLocation" x="1636" y="1459.52023988006"/>
         </scene>
         <!--Microphone-->
         <scene sceneID="DsO-I1-4TC">
             <objects>
-                <viewController id="Hv0-da-b3m" customClass="MicrophoneViewController" customModule="Speech_to_Text" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Hv0-da-b3m" customClass="MicrophoneViewController" customModule="TongueTwister" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jUg-zF-j0L"/>
                         <viewControllerLayoutGuide type="bottom" id="P4y-Nd-I1n"/>
@@ -101,7 +126,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Start the microphone to view a transcription..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="pgK-ou-ijN">
-                                <rect key="frame" x="16" y="28" width="343" height="593"/>
+                                <rect key="frame" x="16" y="216" width="343" height="405"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -113,6 +138,20 @@
                                     <action selector="didPressMicrophoneButton:" destination="Hv0-da-b3m" eventType="touchUpInside" id="hnX-Qw-eht"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="tongue twist" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JY3-kL-vCi">
+                                <rect key="frame" x="16" y="71" width="343" height="127"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Score: 0/100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hCZ-e0-fw9">
+                                <rect key="frame" x="16" y="28" width="201" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -120,13 +159,15 @@
                             <constraint firstItem="yb6-aG-SOj" firstAttribute="top" secondItem="pgK-ou-ijN" secondAttribute="bottom" constant="8" id="92w-02-Z6g"/>
                             <constraint firstItem="P4y-Nd-I1n" firstAttribute="top" secondItem="yb6-aG-SOj" secondAttribute="bottom" constant="8" id="K4u-gS-vWk"/>
                             <constraint firstItem="yb6-aG-SOj" firstAttribute="centerX" secondItem="9sS-qN-wNi" secondAttribute="centerX" id="Zha-nX-K5V"/>
-                            <constraint firstItem="pgK-ou-ijN" firstAttribute="top" secondItem="jUg-zF-j0L" secondAttribute="bottom" constant="8" id="ge5-wO-XcL"/>
+                            <constraint firstItem="pgK-ou-ijN" firstAttribute="top" secondItem="jUg-zF-j0L" secondAttribute="bottom" constant="196" id="ge5-wO-XcL"/>
                             <constraint firstAttribute="trailingMargin" secondItem="pgK-ou-ijN" secondAttribute="trailing" id="wD3-kn-d0d"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Microphone" id="GLu-xz-GM9"/>
+                    <navigationItem key="navigationItem" id="OhC-0s-eCV"/>
                     <connections>
                         <outlet property="microphoneButton" destination="yb6-aG-SOj" id="OYu-uo-i2n"/>
+                        <outlet property="scoreLabel" destination="hCZ-e0-fw9" id="7Zm-4Z-eik"/>
                         <outlet property="textView" destination="pgK-ou-ijN" id="zhh-hK-NJn"/>
                     </connections>
                 </viewController>

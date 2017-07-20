@@ -23,8 +23,17 @@ class MicrophoneViewController: UIViewController {
     var speechToTextSession: SpeechToTextSession!
     var isStreaming = false
     
+    var twisters = ["Peter Piper picked"]
+    var score:Double = 0
+    var currentPoints:Double = 100/3
+    var correct = false
+    var userResults = ""
+    
     @IBOutlet weak var microphoneButton: UIButton!
     @IBOutlet weak var textView: UITextView!
+    
+    
+    @IBOutlet weak var scoreLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -64,7 +73,11 @@ class MicrophoneViewController: UIViewController {
             // start recognizing microphone audio
             speechToText.recognizeMicrophone(settings: settings, failure: failure) {
                 results in
+                
                 self.textView.text = results.bestTranscript
+                self.userResults = results.bestTranscript.lowercased()
+                
+                
             }
             
         } else {
@@ -75,6 +88,36 @@ class MicrophoneViewController: UIViewController {
             
             // stop recognizing microphone audio
             speechToText.stopRecognizeMicrophone()
+            
+            
+            let twist = self.twisters[0].lowercased().components(separatedBy: " ")
+            print("Twister: \(twist)")
+            var userWords = userResults.components(separatedBy: " ")
+            userWords.remove(at: 0)
+            userWords.remove(at: userWords.count-1)
+            print("User's words: \(userWords)")
+            var wordCount = 0
+            var count = 0
+            if userWords.count > twist.count {
+                count = twist.count
+            } else {
+                count = userWords.count
+            }
+            for i in 0..<count {
+                print("Twist:\(twist[i])")
+                print("User: \(userWords[i])")
+                if twist[i] == userWords[i] {
+                    
+                    self.score += self.currentPoints
+                    print(self.score)
+                    
+                }
+                wordCount += 1
+            }
+            
+            self.scoreLabel.text = "Score: \(Int(round(self.score)))/100"
+            
+            score = 0
         }
     }
     
